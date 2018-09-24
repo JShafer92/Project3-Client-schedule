@@ -1,0 +1,38 @@
+1. In the previous section we just installed two packages, Create React App and Yarn. What are they for?
+You don’t need to install or configure tools like Webpack or Babel.
+They are preconfigured and hidden so that you can focus on the code.
+
+Just create a project, and you’re good to go.
+
+
+2. What are some benefits of using ReactJS?
+faster rendering
+stable code across browsers
+native for mobile app development
+simple and easy to learn
+huge user base 
+facilitates the overall process of writing Components
+boost productivity and facilitates maintenance
+
+3. What is a React component? Hint: Check the "Components and Props" section of the React documentation.
+js functions
+
+4. What is the significance of the `ReactDOM.render` method? Hint: Check the "ReactDOM" section of the documentation.
+If the React element was previously rendered into container, this will perform an update on it and only mutate the DOM 
+as necessary to reflect the latest React element.
+
+5. What is JSX? Why does Facebook recommend using it? Hint: Check the "Introducing JSX" section of the documentation.
+JSX is a syntax extension to JavaScript. It is similar to a template language, 
+but it has full power of JavaScript. JSX gets compiled to React.createElement() calls which return plain JavaScript objects 
+called “React elements”
+
+6. What does Facebook recommend as the “best way to start building a new React single page application”? Hint: Check the "Installation" section of the React documentation.
+adding alittle bit of react to your app and expanding in the future
+
+7. What is Babel? And what role does it play in converting JSX into vanilla JavaScript? Hint: Check the "Introducing JSX" section of the documentation.
+toolchain used to convert ecmascript2015+ to backwards compatible versions of JS
+
+8. What is the significance of { } curly braces in JSX? Hint: Check the "Introducing JSX" section of the documentation.
+allows you to put js in jsx. interperlation
+
+9. What is a component prop? Hint: Check the "Components and Props" section of the React documentation.
