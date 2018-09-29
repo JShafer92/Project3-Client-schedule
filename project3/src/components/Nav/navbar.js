@@ -71,6 +71,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
+//import Drawer from '@material-ui/core/Drawer';
 import MenuIcon from '@material-ui/icons/Menu';
 
 const styles = {
@@ -93,11 +94,13 @@ function ButtonAppBar(props) {
       <AppBar position="static">
         <Toolbar>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-            <MenuIcon />
+            <MenuIcon/>
           </IconButton>
           <Typography variant="title" color="inherit" className={classes.grow}>
-          Champion Equine
+            Champion Equine
           </Typography>
+          <Button color="inherit">About</Button>
+          <Button color="inherit">Calender</Button>
           <Button color="inherit">SIGNUP</Button>
         </Toolbar>
       </AppBar>

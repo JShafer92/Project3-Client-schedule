@@ -4,10 +4,8 @@ import React from 'react';
 const About = () => (
     // <section style={styles.sectionStyles} className="about">
     <div> 
-    <h2>Champion Equine LLC</h2>
     
-    //   <img src="public/images/"></img>
-      
+    {/* </div><img src="public/images/"> */}
       <p>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
         doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo

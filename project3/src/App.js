@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import About from './Pages/about'
+import About from './components/Pages/about/about.js';
 //import Calendar from 'react-calendar';
 import './App.css';
 import Navbar from './components/Nav/navbar.js';
+//import Drawer from './components/Drawer/Drawer.js';
 // import Wrapper from './components/Wrapper';
 //import Calender from './components/Calender/Calender.js';
 // import Profile from './components/Profile';
@@ -13,7 +14,7 @@ import Navbar from './components/Nav/navbar.js';
 const App = () => (
   <Router>
     <div>
-      <Navbar />
+      <Navbar/>
       {/* <Wrapper> */}
         <Route exact path="/" component={About} />
         <Route exact path="/about" component={About} />
