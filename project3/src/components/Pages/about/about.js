@@ -2,10 +2,12 @@ import React from 'react';
 
 
 const About = () => (
-    // <section style={styles.sectionStyles} className="about">
     <div> 
+ {/* <section style={styles.sectionStyles} className="about"> */}
+    <h2>Champion Equine LLC</h2>
     
-    {/* </div><img src="public/images/"> */}
+      {/* <img src="public/images/"></img> */}
+      
       <p>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
         doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
