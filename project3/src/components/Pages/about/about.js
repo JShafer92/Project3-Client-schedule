@@ -6,7 +6,7 @@ const About = () => (
  {/* <section style={styles.sectionStyles} className="about"> */}
     <h2>Champion Equine LLC</h2>
     
-      <img src="public/images/"></img>
+      {/* <img src="public/images/"></img> */}
       
       <p>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium

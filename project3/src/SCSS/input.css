@@ -1,0 +1,37 @@
+.nav-link {
+  color: #fff;
+}
+
+.navbar-brand {
+  color: #fff;
+}
+
+.navbar {
+  background-color: #663300;
+  list-style: none;
+}
+
+body {
+  background: url("../Images/client-scheduler-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+.welcomeContent {
+  margin: 0px;
+  width: 50%;
+  height: 80%;
+  padding: 5%;
+  color: #fff;
+  background-color: #472400;
+  float: left;
+}
+
+.Login {
+  background: url("../Images/loginbg.jpg") no-repeat;
+  float: left;
+  width: 50%;
+  padding: 5%;
+  margin: 0px;
+}
+/*# sourceMappingURL=input.css.map */
