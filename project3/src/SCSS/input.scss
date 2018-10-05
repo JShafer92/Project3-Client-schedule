@@ -1,0 +1,34 @@
+@import "./partials/_navbar.scss";
+// @import "calender.scss";
+
+$bodycolor:(
+  primary: #005DFF,
+  white: #fff
+) ;
+
+body{
+  background: url('../Images/client-scheduler-bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin:0;
+  //background-color: map-get($bodycolor, primary); 
+
+}
+.welcomeContent{
+  margin: 0px;
+  width: 50%;
+  height:80%;
+  padding:5%;
+  color: #fff;
+  background-color: #472400;
+  float:left;
+}
+.Login{
+  background:url('../Images/loginbg.jpg') no-repeat;
+  float: left;
+  width:50%;
+  padding:5%;
+  margin: 0px;
+}
