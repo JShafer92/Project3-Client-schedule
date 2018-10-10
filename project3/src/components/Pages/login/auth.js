@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { databasething } from 'src';
-
-const user = ({ id, username }) => (
-    <h1 key={id} >{username}</h1>
-);
-
-const Auth = ({ data: { allUsers = [] } }) => (
-    <div>
-        {allUsers.map(user)}
-    </div>
-);
-
-const query =
-{
-    allUsers {
-        id
-      username
-    }
-};
-=======
 import React, { Component } from 'react';
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 //import { databasething } from 'src';
@@ -127,4 +105,3 @@ export default class Login extends Component {
       );
     }
   }
->>>>>>> dfbd6c7bbda1101f6620347eca93d532fd706e52

@@ -2,15 +2,9 @@ import React from 'react';
 
 
 const About = () => (
+    // <section style={styles.sectionStyles} className="about">
     <div> 
- {/* <section style={styles.sectionStyles} className="about"> */}
-    <h2>Champion Equine LLC</h2>
-    
-<<<<<<< HEAD
-      <img src="public/images/"></img>
-=======
-      {/* <img src="public/images/"></img> */}
->>>>>>> dfbd6c7bbda1101f6620347eca93d532fd706e52
+    <h2>Champion Equine</h2>
       
       <p>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
