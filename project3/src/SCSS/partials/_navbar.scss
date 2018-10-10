@@ -1,10 +1,83 @@
-.nav-link{
-  color: #fff;
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
 }
+nav.navbar{
+  width:100%;
+}
+.nav-link{
+  color: #fff; 
+  height:50px;
+  // border: #fff solid thick 10em;
+  }
+
+  ul.navbar li.nav-item{
+  border: thick solid #fff ; 
+  margin:2px;
+  padding:0px;
+  border-radius: 10%;
+
+  :hover{
+    color: #663300;
+    background-color: #fff;
+    // border-radius: 10%;
+    width: 100%;
+  }
+}
+
+
 .navbar-brand{
+  display: inline-block;
+  width:100%;
+  text-align: center;
   color:#fff;
+  border:black solid thick 2px;
+
+  // :hover{
+  //   color: #663300;
+  //   background-color: #fff;
+  //   border-radius: 10%;
+  //   width: 100%;
+  // }
+  
 }
 .navbar{
-  background-color: #663300;
+  background-color: #663300; 
   list-style: none;
+  display: inline-block;
+  text-align: center;
+  border: #fff solid thick 10em;
+
+  @include desktop {
+    ul.navbar li.nav-item{
+      float:left;
+    }
+    ul.navbar{
+      float:left;
+      //display:block;
+    }
+    .navbar-brand{
+      margin:0px;
+      padding:0px;
+
+    }
+    
+  }
+}
+.login-button{
+  float:left;
+  border: thick solid #fff ; 
+  margin:2px;
+  padding:0px;
+  border-radius: 10%;
+}
+.Login{
+  background:url('../Images/loginbg.jpg') no-repeat;
+  float: left;
+  width:50%;
+  padding:5%;
+  margin: 0px;
 }

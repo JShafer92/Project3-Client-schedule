@@ -8,6 +8,12 @@ import login from './components/Pages/login/auth';
 
 
 
+<<<<<<< HEAD
+=======
+//import login from './components/Pages/login/auth';
+
+
+>>>>>>> dcd1494dfc79b3438e81abdc64aae0d47bd004b9
 const App = () => (
   <Router>
     <div>
@@ -16,7 +22,11 @@ const App = () => (
         <Route exact path="/about" component={About} />
         <Route exact path="/" component={Home} />
         <Route exact path="/calender" component={Calendar} />
+<<<<<<< HEAD
         <Route exact path='/login' component={login}/>
+=======
+        {/* <Route exact path='/login' component={login}/> */}
+>>>>>>> dcd1494dfc79b3438e81abdc64aae0d47bd004b9
     </div>
   </Router>
 );

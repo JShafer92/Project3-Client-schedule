@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import dateFns from "date-fns";
 import "./calendar.css";
 
-class Calendar extends React.Component {
+class Calendar extends Component {
   state = {
     currentMonth: new Date(),
     selectedDate: new Date()
