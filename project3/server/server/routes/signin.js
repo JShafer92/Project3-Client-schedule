@@ -1,22 +1,7 @@
 const User = require('../../modules/user');
-const UserSession = require('../../models/User');
+const UserSession = require('../../models/user');
 
 module.exports = (app) => {
-
-    // module.exports = (app) => {
-    //   app.get('/api/counters', (req, res, next) => {
-    //     Counter.find()
-    //       .exec()
-    //       .then((counter) => res.json(counter))
-    //       .catch((err) => next(err));
-    //   });
-
-    //   app.post('/api/counters', function (req, res, next) {
-    //     const counter = new Counter();
-
-    //     counter.save()
-    //       .then(() => res.json(counter))
-    //       .catch((err) => next(err));
 
     // sign up
     app.post('api/account/signup', (req, res, next) => {
@@ -158,4 +143,56 @@ module.exports = (app) => {
         });
     });
 
+    app.get('/api/account/verify', (req, res, next) => {
+        const { query } = req;
+        const { token } = query;
+
+        UserSession.find({
+            _id: token,
+            isDeleted: false
+        }, (err, sessions) => {
+            if (err) {
+                return res.send({
+                    success: false,
+                    message: 'Error: server error'
+                });
+            }
+            if (sessions.length != 1) {
+                return res.send({
+                    success: false,
+                    message: 'Error: invalid'
+                });
+            }
+            else {
+                return res.send({
+                    success: true,
+                    message: 'Good'
+                });
+            }
+        })
+    })
+
+    app.get('api/account/logout', (req, res, next) => {
+        UserSession.findOneAndUpdate({
+            _id: token,
+            isDeleted: false
+        }, {
+                $set: {
+                    isDeleted: true
+                }
+            }, null, (err, sessions) => {
+                if (err) {
+                    return res.send({
+                        success: false,
+                        message: 'Error: server error'
+                    });
+                }
+                else {
+                    return res.send({
+                        success: true,
+                        message: 'Good'
+                    });
+                }
+            })
+    })
 };
