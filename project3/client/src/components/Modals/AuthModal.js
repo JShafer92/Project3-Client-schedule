@@ -10,13 +10,6 @@ const user = ({ id, username }) => (
                 {allUsers.map(user)}
             </div>
     );
-    // const query =
-// {
-//     allUsers {
-//         id,
-//       username
-//     }
-// };
 
 class AuthModal extends Component {
     constructor(props, context) {
@@ -61,16 +54,21 @@ class AuthModal extends Component {
             style={{background: '#428bca' , width: '100px',height:'50px',border:'none',borderRadius:5,color:'white' }}
             onClick={() =>{
                 this.handleShow()
-            }}
-          >
+            }}>
             Login
           </button>
           <div style={{display}}>
             <div class='modal-holder'>
-                <div onClick={()=>{
-                  this.handleHide();
-                }}>HIDE</div>
+              
                 <input type='text' placeholder='username'></input>
+                <input type='password' placeholder='password'></input>
+                <br></br>
+                <button onClick={()=>{
+                  this.handleHide();
+                }}>Close</button>
+                <button onClick={()=>{
+                  this.handleSubmit
+                }}>Login</button>
             </div>
           </div> 
         </div>
