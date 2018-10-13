@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AuthModal from '../Modals/AuthModal';
+// import AuthModal from '../Modals/AuthModal';
+import Login from '../login/login';
 import "../../SCSS/input.css";
 //require("react-bootstrap/lib/NavbarHeader");
 
@@ -46,12 +47,10 @@ const Navbar = props => (
             Calender
           </Link>
         </li>
-        <li
-          className="login-button" 
-        >
-                <AuthModal />
+        <li className="login-button">
+                <Login />
         </li>
-      </ul>
+      </ul> 
 
       </nav>
     </div>

@@ -92,7 +92,9 @@ class Calendar extends React.Component {
 
   onDateClick = day => {
     this.setState({
-      selectedDate: day
+      selectedDate: day,
+      displayDropdown: true
+      
     });
   };
 
