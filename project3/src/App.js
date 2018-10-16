@@ -4,6 +4,9 @@ import About from './components/Pages/about/about.js';
 import Calendar from './components/Pages/calendar/calendar';
 import Navbar from './components/Nav/navbar.js';
 import Home from './components/Pages/home/home';
+import login from './components/Pages/login/auth';
+
+
 
 //import login from './components/Pages/login/auth';
 
