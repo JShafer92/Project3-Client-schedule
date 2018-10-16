@@ -8,10 +8,10 @@ import "../../SCSS/input.css";
 const Navbar = props => (
   <div className="navContent">
   <nav className="navbar">
-    <Link className="navbar-brand" to="/">
+  <ul className="navbar">
+    <li className="navbar-brand animated zoomIn delay-10s" >
       Champion Equine
-    </Link>
-      <ul className="navbar">
+    </li>
         <li
           className={
             window.location.pathname === "/" ||
@@ -35,7 +35,7 @@ const Navbar = props => (
             Profile
           </Link>
         </li>
-        <li
+        <li 
           className={
             window.location.pathname === "/calender"
               ? "nav-item active"
@@ -49,7 +49,7 @@ const Navbar = props => (
         <li
           className="login-button" 
         >
-                <AuthModal />
+               <a className="nav-link"><AuthModal /></a> 
         </li>
       </ul>
 

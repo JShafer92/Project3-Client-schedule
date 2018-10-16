@@ -5,8 +5,9 @@ $color-name:(
   primary: #005DFF,
   white: #fff,
   brown:#663300,
-  bodycolor: #b35900
+  bodycolor: #ff7f00
 ) ;
+$padding:15px;
 $desktop: 840px;
 
 @mixin desktop {
@@ -14,7 +15,6 @@ $desktop: 840px;
     @content;
   }
 }
-
 // @function color($color-name){
 //   @return map-get($bodycolor, $color-name)
 // }
@@ -28,21 +28,33 @@ body{
   background-size: cover;
   margin:0;
   
- 
+  
   #body-content{
   clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
-  // -webkit-clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
   background-color: map-get($color-name, bodycolor);
   color:white ;
   position: relative;
-  margin:0;  
-
+  height:100vh;
+  z-index: -1;
+  
+  
   @include desktop {
 -webkit-clip-path: polygon(0 0, 80% 0%, 64% 100%, 0% 100%);
 clip-path: polygon(0 0, 80% 0%, 64% 100%, 0% 100%);
 background-color: map-get($color-name, bodycolor);
-height:100vh;
-
+height: 100vh;
+//position: relative;
+  }
+}
+.content{
+  background-color: antiquewhite;
+  color: #b35900;
+  margin:20px;
+  padding:10px;
+  
+  @include desktop{
+    margin:30px;
   }
 }
 }

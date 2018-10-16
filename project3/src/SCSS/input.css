@@ -1,68 +1,37 @@
 nav.navbar {
-  width: 100%;
+  background-color: black;
 }
 
-.nav-link {
-  color: #fff;
-  height: 50px;
-}
-
-ul.navbar li.nav-item {
-  border: thick solid #fff;
-  margin: 2px;
-  padding: 0px;
-  border-radius: 10%;
-}
-
-ul.navbar li.nav-item :hover {
-  color: #663300;
-  background-color: #fff;
-  width: 100%;
+ul.navbar {
+  list-style: none;
 }
 
 .navbar-brand {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  border: black solid thick 2px;
+  color: #ff7f00;
+  font-size: 25px;
+  font-weight: 700;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
 }
 
-.navbar {
-  background-color: #663300;
-  list-style: none;
-  display: inline-block;
-  text-align: center;
-  border: #fff solid thick 10em;
+.nav-link {
+  color: #ff7f00;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
 }
 
-@media (min-width: 840px) {
-  .navbar ul.navbar li.nav-item {
-    float: left;
-  }
-  .navbar ul.navbar {
-    float: left;
-  }
-  .navbar .navbar-brand {
-    margin: 0px;
-    padding: 0px;
-  }
+.nav-item :hover {
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
+  background-color: #ff7f00;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+  color: bisque;
+  border-radius: 18px;
 }
 
-.login-button {
-  float: left;
-  border: thick solid #fff;
-  margin: 2px;
-  padding: 0px;
-  border-radius: 10%;
-}
-
-.Login {
-  background: url("../Images/loginbg.jpg") no-repeat;
-  float: left;
-  width: 50%;
-  padding: 5%;
-  margin: 0px;
+.navContent {
+  border-top: 4px solid #c27a32;
+  border-right: 4px solid #673300;
+  border-bottom: 4px solid #673300;
+  border-left: 4px solid #c27a32;
 }
 
 .Login {
@@ -89,20 +58,34 @@ body {
 }
 
 body #body-content {
+  clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
-  background-color: #b35900;
+  background-color: #ff7f00;
   color: white;
   position: relative;
-  margin: 0;
+  height: 100vh;
+  z-index: -1;
 }
 
 @media (min-width: 840px) {
   body #body-content {
     -webkit-clip-path: polygon(0 0, 80% 0%, 64% 100%, 0% 100%);
     clip-path: polygon(0 0, 80% 0%, 64% 100%, 0% 100%);
-    background-color: #b35900;
+    background-color: #ff7f00;
     height: 100vh;
+  }
+}
+
+body .content {
+  background-color: antiquewhite;
+  color: #b35900;
+  margin: 20px;
+  padding: 10px;
+}
+
+@media (min-width: 840px) {
+  body .content {
+    margin: 30px;
   }
 }
 /*# sourceMappingURL=input.css.map */
