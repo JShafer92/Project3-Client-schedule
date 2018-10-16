@@ -1,15 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AuthModal from '../Modals/AuthModal';
 import "../../SCSS/input.css";
+//require("react-bootstrap/lib/NavbarHeader");
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbar = props => (
-  <div>
+  <div className="navContent">
   <nav className="navbar">
-    <Link className="navbar-brand" to="/">
+  <ul className="navbar">
+    <li className="navbar-brand animated zoomIn delay-10s" >
       Champion Equine
-    </Link>
-      <ul className="navbar">
+    </li>
         <li
           className={
             window.location.pathname === "/" ||
@@ -33,7 +35,7 @@ const Navbar = props => (
             Profile
           </Link>
         </li>
-        <li
+        <li 
           className={
             window.location.pathname === "/calender"
               ? "nav-item active"
@@ -45,17 +47,12 @@ const Navbar = props => (
           </Link>
         </li>
         <li
-          className={
-            window.location.pathname === "/login"
-              ? "nav-item active"
-              : "nav-item"
-          }
+          className="login-button" 
         >
-          <Link to="/login" className="nav-link">
-            Login
-          </Link>
+               <a className="nav-link"><AuthModal /></a> 
         </li>
       </ul>
+
       </nav>
     </div>
   

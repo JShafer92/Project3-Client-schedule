@@ -1,25 +1,6 @@
 import React, { Component } from 'react';
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-//import { databasething } from 'src';
 
-// const user = ({ id, username }) => (
-//     <h1 key={id} >{username}</h1>
-// );
-
-// const Auth = ({ data: { allUsers = [] } }) => (
-//     <div>
-//         {allUsers.map(user)}
-//     </div>
-// );
-
-// const query =
-// {
-//     allUsers {
-//         id
-//       username
-//     }
-// };
-// export default  Auth;
 export default class Login extends Component {
     constructor(props) {
       super(props);
