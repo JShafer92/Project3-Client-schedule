@@ -7,7 +7,7 @@ class Dropdown extends Component {
     constructor(props, context) {
         super(props, context);
 
-        this.handleHide = this.handleHide.bind(this);
+        // this.handleHide = this.handleHide.bind(this);
 
     }
     handleSubmit = event => {
@@ -16,9 +16,11 @@ class Dropdown extends Component {
 
     render() {
         return (
-            <div class="input-group bootstrap-timepicker timepicker">
-                <input id="timepicker1" type="text" class="form-control input-small" />
-                <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+            <div className="input-group bootstrap-timepicker timepicker">
+                <input id="timepicker1" type="text" className="form-control input-small" />
+                <span className="input-group-addon">
+                    <i className="glyphicon glyphicon-time"></i>
+                </span>
                 <button onClick={() => {
                     this.handleSubmit
                 }}>Sumbit Time</button>

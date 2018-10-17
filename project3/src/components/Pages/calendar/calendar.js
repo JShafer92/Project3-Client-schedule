@@ -7,7 +7,8 @@ import Dropdown from '../../Modals/dropdown';
 class Calendar extends React.Component {
   state = {
     currentMonth: new Date(),
-    selectedDate: new Date()
+    selectedDate: new Date(),
+    show: false
   };
 
   renderHeader() {
@@ -92,10 +93,12 @@ class Calendar extends React.Component {
   }
 
   onDateClick = day => {
+    //modal popup function here
+    
+    console.log("ondateclick")
     this.setState({
       selectedDate: day,
-      show: false
-
+      show: true
     });
 
   };
@@ -127,6 +130,7 @@ class Calendar extends React.Component {
         {this.renderHeader()}
         {this.renderDays()}
         {this.renderCells()}
+        {this.state.show ? <Dropdown /> : ""}
       </div>
     );
   }
