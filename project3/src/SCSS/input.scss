@@ -33,9 +33,9 @@ body{
   clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
   background-color: map-get($color-name, bodycolor);
-  color:white ;
   position: relative;
   height:100vh;
+  overflow: hidden;
   z-index: -1;
   
   
