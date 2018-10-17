@@ -1,0 +1,63 @@
+@import "./partials/_navbar.scss";
+@import "./partials/_login.scss";
+
+$color-name:(
+  primary: #005DFF,
+  white: #fff,
+  brown:#663300,
+  bodycolor: #ff7f00
+) ;
+$padding:15px;
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+// @function color($color-name){
+//   @return map-get($bodycolor, $color-name)
+// }
+
+body{
+  margin:0;
+  background: url('../Images/client-scheduler-bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin:0;
+  
+  
+  #body-content{
+  clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
+  background-color: map-get($color-name, bodycolor);
+  position: relative;
+  height:100vh;
+  overflow: hidden;
+  z-index: -1;
+  
+  
+  @include desktop {
+-webkit-clip-path: polygon(0 0, 80% 0%, 64% 100%, 0% 100%);
+clip-path: polygon(0 0, 80% 0%, 64% 100%, 0% 100%);
+background-color: map-get($color-name, bodycolor);
+height: 100vh;
+//position: relative;
+  }
+}
+.content{
+  background-color: antiquewhite;
+  color: #b35900;
+  margin:20px;
+  padding:10px;
+  
+  @include desktop{
+    margin:30px;
+  }
+}
+}
+
+
+

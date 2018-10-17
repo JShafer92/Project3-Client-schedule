@@ -1,22 +1,28 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import About from './components/Pages/about/about'
-import './App.css';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import About from './components/Pages/about/about.js';
+import Calendar from './components/Pages/calendar/calendar';
+import Navbar from './components/Nav/navbar';
+//import Home from './components/Pages/home/home';
+//import login from './components/Pages/login/auth';
+//import login from './components/Pages/login/auth';
+
 
 const App = () => (
+  
   <Router>
     <div>
-      <Navbar />
-      <Wrapper>
+      <Navbar/>
         <Route exact path="/" component={About} />
         <Route exact path="/about" component={About} />
-        <Route exact path="/calender" component={calender} />
-        <Route exact path="/profile" component={Profile} />
-        <Route exact path="/login" component={Login} />
-      </Wrapper>
-      <Footer />
+        {/* <Route exact path="/" component={Home} /> */}
+        <Route exact path="/calender" component={Calendar} />
+        {/* <Route exact path='/login' component={login}/> */}
+    {/* </Navbar> */}
     </div>
+    
   </Router>
+  
 );
 
 export default App;
