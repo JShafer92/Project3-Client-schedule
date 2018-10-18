@@ -1,12 +1,15 @@
 @import "./partials/_navbar.scss";
 @import "./partials/_login.scss";
+@import './partials/footer.scss';
 
 $color-name:(
   primary: #005DFF,
   white: #fff,
   brown:#663300,
-  bodycolor: #b35900
+  bodycolor: #ff7f00,
+  black:black
 ) ;
+$padding:15px;
 $desktop: 840px;
 
 @mixin desktop {
@@ -14,36 +17,58 @@ $desktop: 840px;
     @content;
   }
 }
-
 // @function color($color-name){
 //   @return map-get($bodycolor, $color-name)
 // }
 
 body{
   margin:0;
-  background: url('../Images/client-scheduler-bg.jpg') no-repeat center center fixed;
+  background: url('../Images/whiteHorse.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   margin:0;
   
- 
+  
   #body-content{
   clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
-  // -webkit-clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
   background-color: map-get($color-name, bodycolor);
-  color:white ;
+  color: map-get($color-name, primary);
   position: relative;
-  margin:0;  
-
+  height:100vh;
+  z-index: -1;
+  
+  
   @include desktop {
 -webkit-clip-path: polygon(0 0, 80% 0%, 64% 100%, 0% 100%);
 clip-path: polygon(0 0, 80% 0%, 64% 100%, 0% 100%);
-background-color: map-get($color-name, bodycolor);
-height:100vh;
-
+height: 100vh;
+color: map-get($color-name, white);
+margin:20px;
+padding:10px;
+position: relative;
+opacity: .6;
   }
+}
+.content{
+   
+  @include desktop{
+    background-color: map-get($color-name, bodycolor);
+    color: map-get($color-name, black);
+    position: absolute;
+    margin-right: 30%;
+    margin-top: 3%;
+    padding: 1%;
+    border: #212020 thick solid;
+    border-radius: 25px;
+    background-color: azure;    
+  }
+}
+#heading{
+  background-color: map-get($color-name, bodycolor);
+  color: #212020;
 }
 }
 

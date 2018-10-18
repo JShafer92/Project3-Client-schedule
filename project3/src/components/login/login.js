@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
-// import '.css';
+import "../../SCSS/input.css";
+
 import {
     getFromStorage,
     setInStorage,
@@ -248,71 +249,76 @@ class Login extends Component {
             return (
                 <div>
                     <button
-                        style={{ background: '#428bca', width: '100px', height: '50px', border: 'none', borderRadius: 5, color: 'white' }}
+                        style={{ background: '#ff7f00', width: '100px', height: '50px',  borderStyle:'thin', borderRadius: 5, color: 'bisque' }}
                         onClick={() => {
                             this.handleShow()
                         }}>
                         Login
                     </button>
-                    <div style={{ display }}>
-                        <div>
-                            {
-                                (signInError) ? (
-                                    <p>{signInError}</p>
-                                ) : (null)
-                            }
-                            <p>Sign In</p>
-                            <input
-                                type="email"
-                                placeholder="Email"
-                                value={signInEmail}
-                                onChange={this.onTextboxChangeSignInEmail}
-                            />
-                            <br />
-                            <input
-                                type="password"
-                                placeholder="Password"
-                                value={signInPassword}
-                                onChange={this.onTextboxChangeSignInPassword}
-                            />
-                            <br />
-                            <button onClick={this.onSignIn}>Sign In</button>
-                        </div>
+                    <div  style={{display, background:'bisque', width: '400px', borderRadius:'18px', height: '500px',right:'30px', position:'absolute', zIndex: '1000', border: '5px solid #f1972f', }}>
+                    <div style={{textAlign: 'center'}}>
+                        {
+                            (signInError) ? (
+                                <p>{signInError}</p>
+                            ) : (null)
+                        }
+                        <p>Sign In</p>
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            value={signInEmail}
+                            onChange={this.onTextboxChangeSignInEmail}
+                        />
+                        <br></br>
+                        <br></br>
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            value={signInPassword}
+                            onChange={this.onTextboxChangeSignInPassword}
+                        />
                         <br />
-                        <br />
-                        <div >
-                            {
-                                (signUpError) ? (
-                                    <p>{signUpError}</p>
-                                ) : (null)
-                            }
-                            <p>Sign Up</p>
-                            <input
-                                type="firstName"
-                                placeholder="First Name"
-                                value={signUpFirstName}
-                                onChange={this.onTextboxChangeSignUpFirstName}
-                            /><br />
-                            <input
-                                type="lastName"
-                                placeholder="Last Name"
-                                value={signUpLastName}
-                                onChange={this.onTextboxChangeSignUpLastName}
-                            /><br />
-                            <input
-                                type="email"
-                                placeholder="Email"
-                                value={signUpEmail}
-                                onChange={this.onTextboxChangeSignUpEmail}
-                            /><br />
-                            <input
-                                type="password"
-                                placeholder="Password"
-                                value={signUpPassword}
-                                onChange={this.onTextboxChangeSignUpPassword}
-                            /><br />
-                            <button onClick={this.onSignUp}>Sign Up</button>
-                        </div>
+                        <br></br>
+                        <button onClick={this.onSignIn}>Sign In</button>
+                    </div>
+                    <br />
+                    <div style={{textAlign: 'center'}}>
+                        {
+                            (signUpError) ? (
+                                <p>{signUpError}</p>
+                            ) : (null)
+                        }
+                        <p>Sign Up</p>
+                        <input 
+                            type="firstName"
+                            placeholder="First Name"
+                            value={signUpFirstName}
+                            onChange={this.onTextboxChangeSignUpFirstName}
+                        /><br />
+                        <br></br>
+                        <input
+                            type="lastName"
+                            placeholder="Last Name"
+                            value={signUpLastName}
+                            onChange={this.onTextboxChangeSignUpLastName}
+                        /><br />
+                        <br></br>
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            value={signUpEmail}
+                            onChange={this.onTextboxChangeSignUpEmail}
+                        /><br />
+                        <br></br>
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            value={signUpPassword}
+                            onChange={this.onTextboxChangeSignUpPassword}
+                        /><br />
+                        <br></br>
+                        <button onClick={this.onSignUp}>Sign Up</button>
+                    </div>
                     </div>
 
                 </div>

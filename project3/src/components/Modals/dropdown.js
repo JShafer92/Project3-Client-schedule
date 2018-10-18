@@ -8,28 +8,36 @@ import Jumbotron from "../../components/components/Jumbotron";
 //create a form to submit time
 
 class Dropdown extends Component {
-  
+    // constructor(props) {
+    //     super(props);
 
-    render() {
-        return (
-         
-            <Container fluid>
-                <Row>
-                    <Col size="md-6">
-                        <Jumbotron>
-                            <h1>What time would you like to schedule?</h1>
-                        </Jumbotron>
-                        <form>
-                            <Input name="Time" placeholder="Time (required)" />
-                            <Input name="customerName" placeholder="Customer Name (required)" />
-                            {/* <TextArea name="contact" placeholder="Synopsis (Optional)" /> */}
-                            <FormBtn>Submit Appointment</FormBtn>
-                        </form>
-                    </Col>
-                </Row>
-            </Container>
-        );
-    }
+    //     this.state = {
+    //         isLoading: true,
+    //         time: string,
+    //         customerName: string
+    //     };
+    // }
+
+        render() {
+            return (
+
+                <Container fluid>
+                    <Row>
+                        <Col size="md-6">
+                            <Jumbotron>
+                                <h1>What time would you like to schedule?</h1>
+                            </Jumbotron>
+                            <form>
+                                <Input name="Time" placeholder="Time (required)" />
+                                <Input name="customerName" placeholder="Customer Name (required)" />
+                                {/* <TextArea name="contact" placeholder="Synopsis (Optional)" /> */}
+                                <FormBtn>Submit Appointment</FormBtn>
+                            </form>
+                        </Col>
+                    </Row>
+                </Container>
+            );
+        }
 }
 
-export default Dropdown;
+    export default Dropdown;

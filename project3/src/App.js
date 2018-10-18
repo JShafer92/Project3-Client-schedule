@@ -5,6 +5,7 @@ import Calendar from './components/Pages/calendar/calendar';
 import Navbar from './components/Nav/navbar.js';
 import Appoints from './components/Pages/profile/appoints';
 import login from './components/login/login';
+import Footer from './components/Footer/footer';
 // import login from './components/Pages/login/auth';
 
 
@@ -13,6 +14,7 @@ import login from './components/login/login';
 
 
 const App = () => (
+
   <Router>
     <div>
       <Navbar/>
@@ -21,8 +23,12 @@ const App = () => (
         <Route exact path="/Appointments" component={Appoints} />
         <Route exact path="/calender" component={Calendar} />
         <Route exact path='/login' component={login}/>
+      <Footer />
     </div>
+
+
   </Router>
+
 );
 
 export default App;

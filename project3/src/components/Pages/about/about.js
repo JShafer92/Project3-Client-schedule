@@ -4,10 +4,10 @@ import React from 'react';
 const About = () => (
     <div id="body-content"> 
  {/* <section style={styles.sectionStyles} className="about"> */}
-    <h2>Champion Equine LLC</h2>
+    <h2 id="heading">Champion Equine LLC</h2>
     
       {/* <img src="public/images/"></img> */}
-      
+      <div className="content">
       <p >
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
         doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
@@ -30,6 +30,7 @@ const About = () => (
         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
         est laborum.
       </p>
+      </div>
       </div>
   );
 

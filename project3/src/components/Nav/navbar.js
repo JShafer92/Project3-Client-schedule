@@ -6,13 +6,13 @@ import "../../SCSS/input.css";
 //require("react-bootstrap/lib/NavbarHeader");
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
-const Navbar = props => (
+const Navbar = () => (
   <div className="navContent">
-  <nav className="navbar">
-    <Link className="navbar-brand" to="/">
-      Champion Equine
-    </Link>
+    <nav className="navbar">
       <ul className="navbar">
+        <li className="navbar-brand animated zoomIn delay-10s" >
+          Champion Equine
+    </li>
         <li
           className={
             window.location.pathname === "/" ||
@@ -52,9 +52,9 @@ const Navbar = props => (
         </li>
       </ul> 
 
-      </nav>
-    </div>
-  
+    </nav>
+  </div>
+
 );
 
 export default Navbar;

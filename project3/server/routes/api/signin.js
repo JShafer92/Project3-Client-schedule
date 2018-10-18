@@ -6,14 +6,6 @@ const router = express.Router();
 router.post('/account/signup', (req, res, next) => {
     // const { body } = req;
     console.log(req.body);
-    // const {
-    //     firstName,
-    //     lastName,
-    //     password,
-    // } = body;
-    // let {
-    //     email
-    // } = body;
     let firstName = req.body.firstName;
     let lastName = req.body.lastName;
     let email = req.body.email;
