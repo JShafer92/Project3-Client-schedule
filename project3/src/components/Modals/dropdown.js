@@ -1,30 +1,33 @@
 import React, { Component } from "react";
+import { Input, TextArea, FormBtn } from "../../components/components/Form";
+import { Col, Row, Container } from "../../components/components/Grid";
+import Jumbotron from "../../components/components/Jumbotron";
+
 
 
 //create a form to submit time
 
 class Dropdown extends Component {
-    constructor(props, context) {
-        super(props, context);
-
-        // this.handleHide = this.handleHide.bind(this);
-
-    }
-    handleSubmit = event => {
-        event.preventDefault();
-    }
+  
 
     render() {
         return (
-            <div className="input-group bootstrap-timepicker timepicker">
-                <input id="timepicker1" type="text" className="form-control input-small" />
-                <span className="input-group-addon">
-                    <i className="glyphicon glyphicon-time"></i>
-                </span>
-                <button onClick={() => {
-                    this.handleSubmit
-                }}>Sumbit Time</button>
-            </div>
+         
+            <Container fluid>
+                <Row>
+                    <Col size="md-6">
+                        <Jumbotron>
+                            <h1>What time would you like to schedule?</h1>
+                        </Jumbotron>
+                        <form>
+                            <Input name="Time" placeholder="Time (required)" />
+                            <Input name="customerName" placeholder="Customer Name (required)" />
+                            {/* <TextArea name="contact" placeholder="Synopsis (Optional)" /> */}
+                            <FormBtn>Submit Appointment</FormBtn>
+                        </form>
+                    </Col>
+                </Row>
+            </Container>
         );
     }
 }

@@ -8,6 +8,7 @@ var path = require('path');
 // var userData = require('./routes/api/userData');
 // const db = require("./models");
 const signin = require('./server/routes/api/signin')
+// const routes = require('./server/routes')
 
 
 const app = express();
@@ -23,6 +24,7 @@ app.use(express.static('public'));
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 
+// app.use(routes);
 app.use('/api/', signin);
 // app.use('/api/users', userData);
 

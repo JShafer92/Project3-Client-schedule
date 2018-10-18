@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
-
+// import '.css';
 import {
     getFromStorage,
     setInStorage,
@@ -23,7 +23,7 @@ class Login extends Component {
 
         this.onTextboxChangeSignInEmail = this.onTextboxChangeSignInEmail.bind(this);
         this.onTextboxChangeSignInPassword = this.onTextboxChangeSignInPassword.bind(this);
-        
+
         this.onTextboxChangeSignUpFirstName = this.onTextboxChangeSignUpFirstName.bind(this);
         this.onTextboxChangeSignUpLastName = this.onTextboxChangeSignUpLastName.bind(this);
         this.onTextboxChangeSignUpEmail = this.onTextboxChangeSignUpEmail.bind(this);
@@ -119,10 +119,10 @@ class Login extends Component {
                 password: signUpPassword,
             }),
         })
-        // .then(res =>{
-        //     console.log(res, 'this is res')
-        //     return res.json
-        // })
+            // .then(res =>{
+            //     console.log(res, 'this is res')
+            //     return res.json
+            // })
             .then(json => {
                 console.log('json', json);
                 if (json.success) {
@@ -131,7 +131,8 @@ class Login extends Component {
                         isLoading: false,
                         signUpEmail: '',
                         signUpPassword: '',
-
+                        signUpFirstName: '',
+                        signUpLastName: ''
                     });
                 } else {
                     this.setState({
@@ -215,12 +216,12 @@ class Login extends Component {
 
     handleHide() {
         this.setState({ show: false });
-      }
-      handleShow(){
-          console.log("YOU CLICKED ON THE MODAL BUTTON");
-          console.log('State : ', this.state);
-          this.setState({show:!this.state.show});
-      }
+    }
+    handleShow() {
+        console.log("YOU CLICKED ON THE MODAL BUTTON");
+        // console.log('State : ', this.state);
+        this.setState({ show: !this.state.show });
+    }
 
     render() {
         const {
@@ -236,7 +237,7 @@ class Login extends Component {
             signUpError,
         } = this.state;
 
-        console.log("Current State : ", this.state);
+        // console.log("Current State : ", this.state);
         let display = this.state.show ? 'block' : 'none';
 
         if (isLoading) {
@@ -253,65 +254,65 @@ class Login extends Component {
                         }}>
                         Login
                     </button>
-                    <div style={{display}}>
-                    <div>
-                        {
-                            (signInError) ? (
-                                <p>{signInError}</p>
-                            ) : (null)
-                        }
-                        <p>Sign In</p>
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            value={signInEmail}
-                            onChange={this.onTextboxChangeSignInEmail}
-                        />
+                    <div style={{ display }}>
+                        <div>
+                            {
+                                (signInError) ? (
+                                    <p>{signInError}</p>
+                                ) : (null)
+                            }
+                            <p>Sign In</p>
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                value={signInEmail}
+                                onChange={this.onTextboxChangeSignInEmail}
+                            />
+                            <br />
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                value={signInPassword}
+                                onChange={this.onTextboxChangeSignInPassword}
+                            />
+                            <br />
+                            <button onClick={this.onSignIn}>Sign In</button>
+                        </div>
                         <br />
-                        <input
-                            type="password"
-                            placeholder="Password"
-                            value={signInPassword}
-                            onChange={this.onTextboxChangeSignInPassword}
-                        />
                         <br />
-                        <button onClick={this.onSignIn}>Sign In</button>
-                    </div>
-                    <br />
-                    <br />
-                    <div >
-                        {
-                            (signUpError) ? (
-                                <p>{signUpError}</p>
-                            ) : (null)
-                        }
-                        <p>Sign Up</p>
-                        <input 
-                            type="firstName"
-                            placeholder="First Name"
-                            value={signUpFirstName}
-                            onChange={this.onTextboxChangeSignUpFirstName}
-                        /><br />
-                        <input
-                            type="lastName"
-                            placeholder="Last Name"
-                            value={signUpLastName}
-                            onChange={this.onTextboxChangeSignUpLastName}
-                        /><br />
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            value={signUpEmail}
-                            onChange={this.onTextboxChangeSignUpEmail}
-                        /><br />
-                        <input
-                            type="password"
-                            placeholder="Password"
-                            value={signUpPassword}
-                            onChange={this.onTextboxChangeSignUpPassword}
-                        /><br />
-                        <button onClick={this.onSignUp}>Sign Up</button>
-                    </div>
+                        <div >
+                            {
+                                (signUpError) ? (
+                                    <p>{signUpError}</p>
+                                ) : (null)
+                            }
+                            <p>Sign Up</p>
+                            <input
+                                type="firstName"
+                                placeholder="First Name"
+                                value={signUpFirstName}
+                                onChange={this.onTextboxChangeSignUpFirstName}
+                            /><br />
+                            <input
+                                type="lastName"
+                                placeholder="Last Name"
+                                value={signUpLastName}
+                                onChange={this.onTextboxChangeSignUpLastName}
+                            /><br />
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                value={signUpEmail}
+                                onChange={this.onTextboxChangeSignUpEmail}
+                            /><br />
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                value={signUpPassword}
+                                onChange={this.onTextboxChangeSignUpPassword}
+                            /><br />
+                            <button onClick={this.onSignUp}>Sign Up</button>
+                        </div>
                     </div>
 
                 </div>
