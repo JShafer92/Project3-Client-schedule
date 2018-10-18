@@ -1,14 +1,47 @@
-.Login{
-    background:url('../Images/loginbg.jpg') no-repeat;
-    float: left;
-    width:50%;
-    padding:5%;
-    margin: 0px;
-  }
-  .modal-container {
-       position: relative;
-     }
-     .modal-container .modal, .modal-container .modal-backdrop {
-       position: absolute;
-     }
+$desktop: 840px;
+$backgroundColor:(
+  greycolor:#212020,
+  textcolor:#ff7f00,
+  hovercolor:#f1972f
+) ;
+
+.login-form{
+  background-color: map-get($backgroundColor , #f1972f );
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .Login{
+//     background:url('../Images/loginbg.jpg') no-repeat;
+//     float: left;
+//     width:50%;
+//     padding:5%;
+//     margin: 0px;
+//   }
+//   .modal-container {
+//        position: relative;
+//      }
+//      .modal-container .modal, .modal-container .modal-backdrop {
+//        position: absolute;
+//      }
+
+
      
