@@ -1,27 +1,16 @@
 import React, { Component } from "react";
-import { Input, TextArea, FormBtn } from "../../components/components/Form";
+import { Input, FormBtn } from "../../components/components/Form";
 import { Col, Row, Container } from "../../components/components/Grid";
 import Jumbotron from "../../components/components/Jumbotron";
-
 
 
 //create a form to submit time
 
 class Dropdown extends Component {
-    // constructor(props) {
-    //     super(props);
 
-    //     this.state = {
-    //         isLoading: true,
-    //         time: string,
-    //         customerName: string
-    //     };
-    // }
-
-        render() {
-            return (
-
-                <Container fluid>
+    render() {
+        return (
+                <Container>
                     <Row>
                         <Col size="md-6">
                             <Jumbotron>
@@ -31,13 +20,14 @@ class Dropdown extends Component {
                                 <Input name="Time" placeholder="Time (required)" />
                                 <Input name="customerName" placeholder="Customer Name (required)" />
                                 {/* <TextArea name="contact" placeholder="Synopsis (Optional)" /> */}
+                                <br/>
                                 <FormBtn>Submit Appointment</FormBtn>
                             </form>
                         </Col>
                     </Row>
                 </Container>
-            );
-        }
+        );
+    }
 }
 
-    export default Dropdown;
+export default Dropdown;

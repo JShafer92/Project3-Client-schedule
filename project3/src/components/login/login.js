@@ -181,6 +181,7 @@ class Login extends Component {
                     this.setState({
                         signInError: json.message,
                         isLoading: false,
+                        show:false
                     });
                 }
             });
