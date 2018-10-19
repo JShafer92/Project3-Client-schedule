@@ -1,11 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import AuthModal from '../Modals/AuthModal';
-import Login from '../login/login';
-// import AuthModal from '../Modals/AuthModal';
 import Login from '../login/login';
 import "../../SCSS/input.css";
-//require("react-bootstrap/lib/NavbarHeader");
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbar = () => (
@@ -49,9 +45,9 @@ const Navbar = () => (
             Calender
           </Link>
         </li>
-        <li className="login-button">
+        {/* <li className="login-button">
           <Login />
-        </li>
+        </li> */}
       </ul>
       <li className="login-button">
         <Login />

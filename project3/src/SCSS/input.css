@@ -128,12 +128,6 @@ body #heading {
   position: absolute;
 }
 
-body {
-  margin: 0;
-  background: url("../Images/client-scheduler-bg.jpg") no-repeat center center fixed;
-  background-size: cover;
-  margin: 0;
-}
 
 body #body-content {
   clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
