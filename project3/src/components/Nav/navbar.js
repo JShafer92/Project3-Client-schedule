@@ -1,11 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
 // import AuthModal from '../Modals/AuthModal';
 import Login from '../login/login';
-=======
-import AuthModal from '../Modals/AuthModal';
->>>>>>> 4c227a5c54aa633f857e228665e6773badc048dc
 import "../../SCSS/input.css";
 //require("react-bootstrap/lib/NavbarHeader");
 
@@ -51,19 +47,10 @@ const Navbar = () => (
             Calender
           </Link>
         </li>
-<<<<<<< HEAD
         <li className="login-button">
                 <Login />
         </li>
       </ul> 
-=======
-        <li
-          className="login-button"
-        >
-          <a className="nav-link"><AuthModal /></a>
-        </li>
-      </ul>
->>>>>>> 4c227a5c54aa633f857e228665e6773badc048dc
 
     </nav>
   </div>
