@@ -20,7 +20,6 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
     "susy": "^3.0.5",
-    "webpack-hot-middleware": "^2.24.3"
   },
   "scripts": {
     "start": "react-scripts start",
