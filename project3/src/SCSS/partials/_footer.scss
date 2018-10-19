@@ -1,0 +1,19 @@
+$backgroundColor:(
+  greycolor:#212020,
+  textcolor:#ff7f00,
+  hovercolor:#f1972f
+) ;
+.footer-content{
+    background-color: map-get($backgroundColor, greycolor );
+    color: map-get($backgroundColor, textcolor);
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    padding:10px;
+    bottom: 0px;
+    border-right:4px solid #673300;
+    border-bottom:4px solid #673300;
+    border-left:4px solid #c27a32;
+
+}

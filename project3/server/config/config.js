@@ -1,7 +1,8 @@
-const mongoose = require ('mongoose')
+const mongoose = require ('mongoose');
 
 //connect to mongodb
-mongoose.connect('mongodb://localhost/login');
+
+mongoose.connect('mongodb://localhost/login'),
 
 mongoose.connection.once('open', function(){
     console.log('connection has been made');

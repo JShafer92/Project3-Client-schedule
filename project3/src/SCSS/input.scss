@@ -1,11 +1,20 @@
 @import "./partials/_navbar.scss";
 @import "./partials/_login.scss";
+<<<<<<< HEAD
+@import './partials/footer.scss';
+=======
+>>>>>>> 4c227a5c54aa633f857e228665e6773badc048dc
 
 $color-name:(
   primary: #005DFF,
   white: #fff,
   brown:#663300,
+<<<<<<< HEAD
+  bodycolor: #ff7f00,
+  black:black
+=======
   bodycolor: #ff7f00
+>>>>>>> 4c227a5c54aa633f857e228665e6773badc048dc
 ) ;
 $padding:15px;
 $desktop: 840px;
@@ -21,7 +30,11 @@ $desktop: 840px;
 
 body{
   margin:0;
+<<<<<<< HEAD
+  background: url('../Images/whiteHorse.jpg') no-repeat center center fixed;
+=======
   background: url('../Images/client-scheduler-bg.jpg') no-repeat center center fixed;
+>>>>>>> 4c227a5c54aa633f857e228665e6773badc048dc
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -33,15 +46,50 @@ body{
   clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
   background-color: map-get($color-name, bodycolor);
+<<<<<<< HEAD
+  color: map-get($color-name, primary);
+  position: relative;
+  height:100vh;
+=======
   position: relative;
   height:100vh;
   overflow: hidden;
+>>>>>>> 4c227a5c54aa633f857e228665e6773badc048dc
   z-index: -1;
   
   
   @include desktop {
 -webkit-clip-path: polygon(0 0, 80% 0%, 64% 100%, 0% 100%);
 clip-path: polygon(0 0, 80% 0%, 64% 100%, 0% 100%);
+<<<<<<< HEAD
+height: 100vh;
+color: map-get($color-name, white);
+margin:20px;
+padding:10px;
+position: relative;
+opacity: .6;
+  }
+}
+.content{
+   
+  @include desktop{
+    background-color: map-get($color-name, bodycolor);
+    color: map-get($color-name, black);
+    position: absolute;
+    margin-right: 30%;
+    margin-top: 3%;
+    padding: 1%;
+    border: #212020 thick solid;
+    border-radius: 25px;
+    background-color: azure;    
+  }
+}
+#heading{
+  background-color: map-get($color-name, bodycolor);
+  color: #212020;
+}
+}
+=======
 background-color: map-get($color-name, bodycolor);
 height: 100vh;
 //position: relative;
@@ -58,6 +106,7 @@ height: 100vh;
   }
 }
 }
+>>>>>>> 4c227a5c54aa633f857e228665e6773badc048dc
 
 
 

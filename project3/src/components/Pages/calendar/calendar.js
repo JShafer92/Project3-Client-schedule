@@ -2,11 +2,13 @@ import React from "react";
 import dateFns from "date-fns";
 // import timeModal from "timeModal";
 import "./calendar.css";
+import Dropdown from '../../Modals/dropdown';
 
 class Calendar extends React.Component {
   state = {
     currentMonth: new Date(),
-    selectedDate: new Date()
+    selectedDate: new Date(),
+    show: false
   };
 
   renderHeader() {
@@ -70,7 +72,7 @@ class Calendar extends React.Component {
               !dateFns.isSameMonth(day, monthStart)
                 ? "disabled"
                 : dateFns.isSameDay(day, selectedDate) ? "selected" : ""
-            }`}
+              }`}
             key={day}
             onClick={() => this.onDateClick(dateFns.parse(cloneDay))}
           >
@@ -91,10 +93,23 @@ class Calendar extends React.Component {
   }
 
   onDateClick = day => {
+    //modal popup function here
+    
+    console.log("ondateclick")
     this.setState({
-      selectedDate: day
+      selectedDate: day,
+      show: true
     });
+
   };
+  // handleHide() {
+  //   this.setState({ show: false });
+  // }
+  // handleShow() {
+  //   console.log("YOU CLICKED ON THE MODAL BUTTON");
+  //   console.log('State : ', this.state);
+  //   this.setState({ show: !this.state.show });
+  // }
 
   nextMonth = () => {
     this.setState({
@@ -109,11 +124,13 @@ class Calendar extends React.Component {
   };
 
   render() {
+    
     return (
       <div className="calendar">
         {this.renderHeader()}
         {this.renderDays()}
         {this.renderCells()}
+        {this.state.show ? <Dropdown /> : ""}
       </div>
     );
   }

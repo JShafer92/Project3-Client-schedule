@@ -4,11 +4,16 @@ import React from 'react';
 const About = () => (
     <div id="body-content"> 
  {/* <section style={styles.sectionStyles} className="about"> */}
-    <h2>Champion Equine LLC</h2>
+    <h2 id="heading">Champion Equine LLC</h2>
     
       {/* <img src="public/images/"></img> */}
+<<<<<<< HEAD
+      <div className="content">
+      <p >
+=======
       
       <p className="content">
+>>>>>>> 4c227a5c54aa633f857e228665e6773badc048dc
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
         doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
         inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
@@ -30,6 +35,7 @@ const About = () => (
         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
         est laborum.
       </p>
+      </div>
       </div>
   );
 
