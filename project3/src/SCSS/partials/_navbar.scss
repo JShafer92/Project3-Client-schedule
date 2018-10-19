@@ -2,7 +2,8 @@ $desktop: 840px;
 $backgroundColor:(
   greycolor:#212020,
   textcolor:#ff7f00,
-  hovercolor:#f1972f
+  hovercolor:#f1972f,
+  bisque: bisque
 ) ;
 
 @mixin desktop {
@@ -12,96 +13,182 @@ $backgroundColor:(
 }
 nav.navbar{
   background-color:map-get($backgroundColor , greycolor );
+  @include desktop{
+    background-color:map-get($backgroundColor , greycolor );
+    // display: inline-block;
+    margin: 0px;
+  }
 }
 ul.navbar{
-  list-style: none;  
+  list-style: none; 
+  // width: 100%;
+  text-align: center; 
+  // display: inline-block;
+  // border-top: 4px solid #c27a32;
+  // border-right:4px solid #673300;
+  // border-bottom:4px solid #673300;
+  // border-left:4px solid #c27a32;
+  
+
+  :hover{
+        background-color: map-get($backgroundColor , greycolor );
+        color:map-get($backgroundColor , textcolor);
+      }
+  
+  // @include desktop{
+  //   display: block;
+  //   height:70px;
+  //   float: left;
+  // }
 }
+//   :hover{
+//     background-color: map-get($backgroundColor , greycolor );
+//     color:map-get($backgroundColor , textcolor)
+//   }
+//   @include desktop{
+// display: inline-block;
+// float: left;
+//   }
+    
+// }
 .navbar-brand{
-  color:map-get($backgroundColor , textcolor );
+  color:map-get($backgroundColor , bisque );
   font-size: 25px;
   font-weight: 700;
   text-shadow: 0 2px 1px rgba(0,0,0,0.5);
+  text-align: center;
+  // width:100%;
+  padding:15px;
+  // border-radius: 25px;
+//   background-color: #f1972f;
+//   border-top: 4px solid #c27a32;
+// border-right:4px solid #673300;
+// border-bottom:4px solid #673300;
+// border-left:4px solid #c27a32;
+
+
+
+  @include desktop{
+    background-color:map-get($backgroundColor , greycolor );
+    color: map-get($backgroundColor , textcolor );
+    // float: left;
+    //display: inline-block;
 }
+}
+//   // margin-left:50px;
+//   // display: inline-block;
+// }
+// // link is the class name containing all the about, profile and calender
 .nav-link{
   color:map-get($backgroundColor , textcolor );
+  // background-color: #f1972f;
   text-shadow: 0 2px 1px rgba(0,0,0,0.5);
-}
-.nav-item{
-  :hover{
-    animation-name: zoomIn;
-    background-color: map-get($backgroundColor , textcolor );
-    text-shadow: 0 2px 1px rgba(0,0,0,0.5);
-    color: bisque;
-    border-radius:18px;
-    }
-}
-.navContent{
-  border-top: 4px solid #c27a32;
-border-right:4px solid #673300;
-border-bottom:4px solid #673300;
-border-left:4px solid #c27a32;
-}
-.login-button{
-align-content: flex-end;
-}
-// nav.navbar{
-//   width:100%; 
-// }
-// .nav-link:hover{
-//   animation-name: zoomIn;
-//   animation-duration: 2s;
-// }
-// .nav-link{
-//   color: #fff; 
-//   //height:50px;
-//   // border: #fff solid thick 10em;
-//   }
-//   ul.navbar li.nav-item{
+  align-content: center;  
+  padding: 15px;
+//   border-top: 4px solid #c27a32;
+// border-right:4px solid #673300;
+// border-bottom:4px solid #673300;
+// border-left:4px solid #c27a32;
+  // border-radius: 25px;
 
+  // @include desktop{
+  //   background-color:map-get($backgroundColor , greycolor );
+  //   display: inline-block;
+  //   float: left;
+  //   color: map-get($backgroundColor , textcolor );
+  // }
+  
+}
+// // nav link is present inside this nav item classname
+// .nav-item{
+//   //display:block;
 //   :hover{
-//     color: #663300;
-//     background-color: #fff;
-//     border-radius: 18px; 
-//   }
-// }
-// .navbar-brand{
-//   float:left;
-//   background-color: black;
-//   color:#fff;
-//   font-family: 'Times New Roman', Times, serif;
-//   font-size: 28px;
-// }
+//     animation-name: zoomIn;
+//     text-shadow: 0 2px 1px rgba(0,0,0,0.5);
+//     // color: bisque;
+//     // border-radius:18px;
+//     background-color: map-get($backgroundColor , greycolor );
+//     color:map-get($backgroundColor , textcolor)
+//     }
 
-// .navbar{
-//   background-color: #663300; 
-//   list-style: none;
-//   display: inline-block;
-//   text-align: center;
-//   //border: thin solid #fff;
-
-//   @include desktop {
-//    li.nav-item{
-//       float:left;
-//     }  
-//   }
+//     @include desktop{
+//       display: inline-block;
+//       float: left;
+//     }
 // }
-// .login-button{
-//   float:left;
-//   width:100%;
-//   position:relative;
-//   //border: thin solid #fff ; 
-//   // margin:2px;
-//   padding:0px;
-//   border-radius: 18px;
-
-//   @include desktop{
-//     //display: inline-block;
-//   }
-// }
-// // .Login{
-// //   background:url('../Images/loginbg.jpg') no-repeat;
-// //   float: left;
-// //   width:50%;
-// //   padding:5%;
-// //   margin: 0px;
+// // .navContent{
+// //   border-top: 4px solid #c27a32;
+// // border-right:4px solid #673300;
+// // border-bottom:4px solid #673300;
+// // border-left:4px solid #c27a32;
 // // }
+// .login-button{
+// // align-content: flex-end;
+// }
+// // nav.navbar{
+// //   width:100%; 
+// // }
+// // .nav-link:hover{
+// //   animation-name: zoomIn;
+// //   animation-duration: 2s;
+// // }
+// // .nav-link{
+// //   color: #fff; 
+// //   //height:50px;
+// //   // border: #fff solid thick 10em;
+// //   }
+// //   ul.navbar li.nav-item{
+
+// //   :hover{
+// //     color: #663300;
+// //     background-color: #fff;
+// //     border-radius: 18px; 
+// //   }
+// // }
+// // .navbar-brand{
+// //   float:left;
+// //   background-color: black;
+// //   color:#fff;
+// //   font-family: 'Times New Roman', Times, serif;
+// //   font-size: 28px;
+// // }
+
+// // .navbar{
+// //   background-color: #663300; 
+// //   list-style: none;
+// //   display: inline-block;
+// //   text-align: center;
+// //   //border: thin solid #fff;
+
+// //   @include desktop {
+// //    li.nav-item{
+// //       float:left;
+// //     }  
+// //   }
+// // }
+.login-button{
+  float:left;
+  // width:100%;
+  position:relative;
+  color:map-get($backgroundColor , bisque );
+  //border: thin solid #fff ; 
+  // margin:2px;
+  // padding:5px;
+//   border-top: 4px solid #c27a32;
+// border-right:4px solid #673300;
+// border-bottom:4px solid #673300;
+// border-left:4px solid #c27a32;
+background-color:map-get($backgroundColor , hovercolor );
+
+  @include desktop{
+    float:left;
+    //display: inline-block;
+  }
+}
+// // // .Login{
+// // //   background:url('../Images/loginbg.jpg') no-repeat;
+// // //   float: left;
+// // //   width:50%;
+// // //   padding:5%;
+// // //   margin: 0px;
+// // // }

@@ -35,10 +35,10 @@ body{
   clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
   background-color: map-get($color-name, bodycolor);
-  color: map-get($color-name, primary);
   position: relative;
-  height:100vh;
+  padding-bottom: 50%;
   z-index: -1;
+  opacity: .6;
   
   
   @include desktop {
@@ -53,7 +53,14 @@ opacity: .6;
   }
 }
 .content{
-   
+
+  border: #212020 thick solid;
+    color: map-get($color-name, black);
+    //height:60%;
+    padding: 1%;
+    margin: 10%;
+    border-radius: 25px;
+    background-color: azure;
   @include desktop{
     background-color: map-get($color-name, bodycolor);
     color: map-get($color-name, black);

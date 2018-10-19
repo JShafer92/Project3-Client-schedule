@@ -2,41 +2,58 @@ nav.navbar {
   background-color: #212020;
 }
 
+@media (min-width: 840px) {
+  nav.navbar {
+    background-color: #212020;
+    margin: 0px;
+  }
+}
+
 ul.navbar {
   list-style: none;
+  text-align: center;
+}
+
+ul.navbar :hover {
+  background-color: #212020;
+  color: #ff7f00;
 }
 
 .navbar-brand {
-  color: #ff7f00;
+  color: bisque;
   font-size: 25px;
   font-weight: 700;
   text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 15px;
+}
+
+@media (min-width: 840px) {
+  .navbar-brand {
+    background-color: #212020;
+    color: #ff7f00;
+  }
 }
 
 .nav-link {
   color: #ff7f00;
   text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
-}
-
-.nav-item :hover {
-  -webkit-animation-name: zoomIn;
-          animation-name: zoomIn;
-  background-color: #ff7f00;
-  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
-  color: bisque;
-  border-radius: 18px;
-}
-
-.navContent {
-  border-top: 4px solid #c27a32;
-  border-right: 4px solid #673300;
-  border-bottom: 4px solid #673300;
-  border-left: 4px solid #c27a32;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 15px;
 }
 
 .login-button {
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
+  float: left;
+  position: relative;
+  color: bisque;
+  background-color: #f1972f;
+}
+
+@media (min-width: 840px) {
+  .login-button {
+    float: left;
+  }
 }
 
 .footer-content {
@@ -64,10 +81,10 @@ body #body-content {
   clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
   background-color: #ff7f00;
-  color: #005DFF;
   position: relative;
-  height: 100vh;
+  padding-bottom: 50%;
   z-index: -1;
+  opacity: .6;
 }
 
 @media (min-width: 840px) {
@@ -81,6 +98,15 @@ body #body-content {
     position: relative;
     opacity: .6;
   }
+}
+
+body .content {
+  border: #212020 thick solid;
+  color: black;
+  padding: 1%;
+  margin: 10%;
+  border-radius: 25px;
+  background-color: azure;
 }
 
 @media (min-width: 840px) {

@@ -248,7 +248,7 @@ class Login extends Component {
             return (
                 <div>
                     <button
-                        style={{ background: '#ff7f00', width: '100px', height: '50px',  borderStyle:'thin', borderRadius: 5, color: 'bisque' }}
+                        style={{ background: '#f1972f', width: '100px', height: '50px', border: 'none'}}
                         onClick={() => {
                             this.handleShow()
                         }}>
