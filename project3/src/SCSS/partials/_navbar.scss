@@ -1,0 +1,46 @@
+$desktop: 840px;
+$backgroundColor:(
+  greycolor:#212020,
+  textcolor:#ff7f00,
+  hovercolor:#f1972f
+) ;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+nav.navbar{
+  background-color:map-get($backgroundColor , greycolor );
+}
+ul.navbar{
+  list-style: none;  
+}
+.navbar-brand{
+  color:map-get($backgroundColor , textcolor );
+  font-size: 25px;
+  font-weight: 700;
+  text-shadow: 0 2px 1px rgba(0,0,0,0.5);
+}
+.nav-link{
+  color:map-get($backgroundColor , textcolor );
+  text-shadow: 0 2px 1px rgba(0,0,0,0.5);
+}
+.nav-item{
+  :hover{
+    animation-name: zoomIn;
+    background-color: map-get($backgroundColor , textcolor );
+    text-shadow: 0 2px 1px rgba(0,0,0,0.5);
+    color: bisque;
+    border-radius:18px;
+    }
+}
+.navContent{
+  border-top: 4px solid #c27a32;
+border-right:4px solid #673300;
+border-bottom:4px solid #673300;
+border-left:4px solid #c27a32;
+}
+.login-button{
+align-content: flex-end;
+}

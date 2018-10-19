@@ -1,36 +1,43 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+<<<<<<< HEAD
+// import AuthModal from '../Modals/AuthModal';
+import Login from '../login/login';
+=======
+import AuthModal from '../Modals/AuthModal';
+>>>>>>> 4c227a5c54aa633f857e228665e6773badc048dc
+import "../../SCSS/input.css";
+//require("react-bootstrap/lib/NavbarHeader");
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
-const Navbar = props => (
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <Link className="navbar-brand" to="/">
-      Champion Equine
-    </Link>
-    <div>
-      <ul className="navbar-nav">
+const Navbar = () => (
+  <div className="navContent">
+    <nav className="navbar">
+      <ul className="navbar">
+        <li className="navbar-brand animated zoomIn delay-10s" >
+          Champion Equine
+    </li>
         <li
           className={
             window.location.pathname === "/" ||
-            window.location.pathname === "/about"
+              window.location.pathname === "/about"
               ? "nav-item active"
               : "nav-item"
           }
         >
-          <Link to="/" className="nav-link">
+          <Link to="/about" className="nav-link">
             About
           </Link>
         </li>
         <li
           className={
-            window.location.pathname === "/profile"
+            window.location.pathname === "/appointments"
               ? "nav-item active"
               : "nav-item"
           }
         >
-          <Link to="/profile" className="nav-link">
-            Profile
+          <Link to="/appointments" className="nav-link">
+          Appointments
           </Link>
         </li>
         <li
@@ -44,21 +51,23 @@ const Navbar = props => (
             Calender
           </Link>
         </li>
-        <li
-          className={
-            window.location.pathname === "/login"
-              ? "nav-item active"
-              : "nav-item"
-          }
-        >
-          <Link to="/login" className="nav-link">
-            Login
-          </Link>
+<<<<<<< HEAD
+        <li className="login-button">
+                <Login />
         </li>
-        
+      </ul> 
+=======
+        <li
+          className="login-button"
+        >
+          <a className="nav-link"><AuthModal /></a>
+        </li>
       </ul>
-    </div>
-  </nav>
+>>>>>>> 4c227a5c54aa633f857e228665e6773badc048dc
+
+    </nav>
+  </div>
+
 );
 
 export default Navbar;
