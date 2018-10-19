@@ -6,14 +6,11 @@ import Navbar from './components/Nav/navbar.js';
 import Appoints from './components/Pages/profile/appoints';
 import login from './components/login/login';
 import Footer from './components/Footer/footer';
-// import login from './components/Pages/login/auth';
 
-
-
-//import login from './components/Pages/login/auth';
 
 
 const App = () => (
+
   <Router>
     <div>
       <Navbar/>

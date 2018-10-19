@@ -1,5 +1,7 @@
 nav.navbar {
   background-color: #212020;
+  background-color: #212020;
+  background-color: black;
 }
 
 ul.navbar {
@@ -95,6 +97,22 @@ body #body-content {
     border-radius: 25px;
     background-color: azure;
   }
+}
+
+.nav-item :hover {
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
+  background-color: #ff7f00;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+  color: bisque;
+  border-radius: 18px;
+}
+
+.navContent {
+  border-top: 4px solid #c27a32;
+  border-right: 4px solid #673300;
+  border-bottom: 4px solid #673300;
+  border-left: 4px solid #c27a32;
 }
 
 body #heading {

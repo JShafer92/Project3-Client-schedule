@@ -1,11 +1,14 @@
 @import "./partials/_navbar.scss";
 @import "./partials/_login.scss";
 @import './partials/footer.scss';
+@import './partials/footer.scss';
 
 $color-name:(
   primary: #005DFF,
   white: #fff,
   brown:#663300,
+  bodycolor: #ff7f00,
+  black:black
   bodycolor: #ff7f00,
   black:black
 ) ;
@@ -24,6 +27,8 @@ $desktop: 840px;
 body{
   margin:0;
   background: url('../Images/whiteHorse.jpg') no-repeat center center fixed;
+  background: url('../Images/whiteHorse.jpg') no-repeat center center fixed;
+  background: url('../Images/client-scheduler-bg.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -35,6 +40,9 @@ body{
   clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
   background-color: map-get($color-name, bodycolor);
+  color: map-get($color-name, primary);
+  position: relative;
+  height:100vh;
   color: map-get($color-name, primary);
   position: relative;
   height:100vh;
@@ -70,7 +78,15 @@ opacity: .6;
   background-color: map-get($color-name, bodycolor);
   color: #212020;
 }
+
+.content{
+  background-color: antiquewhite;
+  color: #b35900;
+  margin:20px;
+  padding:10px;
+  
+  @include desktop{
+    margin:30px;
+  }
 }
-
-
-
+}
