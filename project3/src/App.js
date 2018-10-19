@@ -2,21 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import About from './components/Pages/about/about.js';
 import Calendar from './components/Pages/calendar/calendar';
-<<<<<<< HEAD
 import Navbar from './components/Nav/navbar.js';
 import Appoints from './components/Pages/profile/appoints';
 import login from './components/login/login';
 import Footer from './components/Footer/footer';
-// import login from './components/Pages/login/auth';
-
-
-
-=======
-import Navbar from './components/Nav/navbar';
-//import Home from './components/Pages/home/home';
-//import login from './components/Pages/login/auth';
->>>>>>> 4c227a5c54aa633f857e228665e6773badc048dc
-//import login from './components/Pages/login/auth';
 
 
 const App = () => (
