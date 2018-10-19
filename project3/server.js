@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Bringing in necessary dependencies.
 var express = require('express');
 var mongoose = require('mongoose');
@@ -39,4 +40,24 @@ mongoose.connect(
 //Syncing with the database prior to listening on port 3001
 app.listen(process.env.PORT || 3001, function() {
   console.log("App listening on PORT " + PORT);
+=======
+const nodemon = require('nodemon');
+const path = require('path');
+
+nodemon({
+  execMap: {
+    js: 'node'
+  },
+  script: path.join(__dirname, 'server/server'),
+  ignore: [],
+  watch: process.env.NODE_ENV !== 'production' ? ['server/*'] : false,
+  ext: 'js'
+})
+.on('restart', function() {
+  console.log('Server restarted!');
+})
+.once('exit', function () {
+  console.log('Shutting down server');
+  process.exit();
+>>>>>>> 4c227a5c54aa633f857e228665e6773badc048dc
 });

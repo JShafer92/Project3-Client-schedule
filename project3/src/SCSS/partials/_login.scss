@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $desktop: 840px;
 $backgroundColor:(
   greycolor:#212020,
@@ -45,3 +46,19 @@ $backgroundColor:(
 
 
      
+=======
+.Login{
+    background:url('../Images/loginbg.jpg') no-repeat;
+    float: left;
+    width:50%;
+    padding:5%;
+    margin: 0px;
+  }
+  .modal-container {
+       position: relative;
+     }
+     .modal-container .modal, .modal-container .modal-backdrop {
+       position: absolute;
+     }
+     
+>>>>>>> 4c227a5c54aa633f857e228665e6773badc048dc

@@ -1,5 +1,9 @@
 nav.navbar {
+<<<<<<< HEAD
   background-color: #212020;
+=======
+  background-color: black;
+>>>>>>> 4c227a5c54aa633f857e228665e6773badc048dc
 }
 
 ul.navbar {
@@ -16,6 +20,7 @@ ul.navbar {
 .nav-link {
   color: #ff7f00;
   text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+<<<<<<< HEAD
 }
 
 .nav-item :hover {
@@ -95,10 +100,75 @@ body #body-content {
     border-radius: 25px;
     background-color: azure;
   }
+=======
+}
+
+.nav-item :hover {
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
+  background-color: #ff7f00;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+  color: bisque;
+  border-radius: 18px;
+}
+
+.navContent {
+  border-top: 4px solid #c27a32;
+  border-right: 4px solid #673300;
+  border-bottom: 4px solid #673300;
+  border-left: 4px solid #c27a32;
+>>>>>>> 4c227a5c54aa633f857e228665e6773badc048dc
 }
 
 body #heading {
   background-color: #ff7f00;
   color: #212020;
+}
+
+.modal-container {
+  position: relative;
+}
+
+.modal-container .modal, .modal-container .modal-backdrop {
+  position: absolute;
+}
+
+body {
+  margin: 0;
+  background: url("../Images/client-scheduler-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+body #body-content {
+  clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
+  background-color: #ff7f00;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+@media (min-width: 840px) {
+  body #body-content {
+    -webkit-clip-path: polygon(0 0, 80% 0%, 64% 100%, 0% 100%);
+    clip-path: polygon(0 0, 80% 0%, 64% 100%, 0% 100%);
+    background-color: #ff7f00;
+    height: 100vh;
+  }
+}
+
+body .content {
+  background-color: antiquewhite;
+  color: #b35900;
+  margin: 20px;
+  padding: 10px;
+}
+
+@media (min-width: 840px) {
+  body .content {
+    margin: 30px;
+  }
 }
 /*# sourceMappingURL=input.css.map */
