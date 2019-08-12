@@ -6,11 +6,10 @@ import Navbar from './components/Nav/navbar.js';
 import Appoints from './components/Pages/profile/appoints';
 import login from './components/login/login';
 import Footer from './components/Footer/footer';
-
+import './SCSS/input.css';
 
 
 const App = () => (
-
   <Router>
     <div>
       <Navbar/>

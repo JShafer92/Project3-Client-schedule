@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import AuthModal from '../Modals/AuthModal';
 import Login from '../login/login';
 import "../../SCSS/input.css";
 
@@ -45,6 +46,12 @@ const Navbar = () => (
             Calender
           </Link>
         </li>
+        <li className="login-button">
+                <Login />
+        </li>
+      </ul> 
+
+
         {/* <li className="login-button">
           <Login />
         </li> */}

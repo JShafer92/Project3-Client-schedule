@@ -3,6 +3,7 @@
 @import './partials/footer.scss';
 @import './partials/footer.scss';
 
+
 $color-name:(
   primary: #005DFF,
   white: #fff,
@@ -60,24 +61,33 @@ position: relative;
 opacity: .6;
   }
 }
-.content{
-   
-  @include desktop{
-    background-color: map-get($color-name, bodycolor);
-    color: map-get($color-name, black);
-    position: absolute;
-    margin-right: 30%;
-    margin-top: 3%;
-    padding: 1%;
+  .content{
+
     border: #212020 thick solid;
-    border-radius: 25px;
-    background-color: azure;    
+      color: map-get($color-name, black);
+      //height:60%;
+      padding: 1%;
+      margin: 10%;
+      border-radius: 25px;
+      background-color: azure;
+    @include desktop{
+      background-color: map-get($color-name, bodycolor);
+      color: map-get($color-name, black);
+      position: absolute;
+      margin-right: 30%;
+      margin-top: 3%;
+      padding: 1%;
+      border: #212020 thick solid;
+      border-radius: 25px;
+      background-color: azure;    
+    }
   }
-}
+   
 #heading{
   background-color: map-get($color-name, bodycolor);
   color: #212020;
 }
+
 
 .content{
   background-color: antiquewhite;
@@ -89,4 +99,4 @@ opacity: .6;
     margin:30px;
   }
 }
-}
+

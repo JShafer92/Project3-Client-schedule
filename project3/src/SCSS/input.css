@@ -2,6 +2,7 @@ nav.navbar {
   background-color: #212020;
   background-color: #212020;
   background-color: black;
+
 }
 
 ul.navbar {
@@ -129,7 +130,7 @@ body #heading {
 }
 
 
-body #body-content {
+/* body #body-content {
   clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 63%, 69% 100%, 0 100%);
   background-color: #ff7f00;
@@ -137,7 +138,7 @@ body #body-content {
   height: 100vh;
   overflow: hidden;
   z-index: -1;
-}
+} */
 
 @media (min-width: 840px) {
   body #body-content {
