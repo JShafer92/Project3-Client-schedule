@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
-import "../../SCSS/input.css";
+// import "../../SCSS/input.css";
 
 import {
     getFromStorage,
