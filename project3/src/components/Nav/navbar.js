@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 // import AuthModal from '../Modals/AuthModal';
 import Login from '../login/login';
 import "../../SCSS/input.css";
-//require("react-bootstrap/lib/NavbarHeader");
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbar = () => (
@@ -33,7 +32,7 @@ const Navbar = () => (
           }
         >
           <Link to="/appointments" className="nav-link">
-          Appointments
+            Appointments
           </Link>
         </li>
         <li
@@ -52,8 +51,16 @@ const Navbar = () => (
         </li>
       </ul> 
 
+
+        {/* <li className="login-button">
+          <Login />
+        </li> */}
+      </ul>
+      <li className="login-button">
+        <Login />
+      </li>
     </nav>
-  </div>
+  </div >
 
 );
 
